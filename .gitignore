@@ -1,6 +1,90 @@
-# Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
-bin
-obj
+# git ignore file
 
-# mstest test results
-TestResults
+
+# There are some dll files that are commited to the repository.
+# These apparently are needed for InstallerCustomActions and to bootstrap the Messages
+*.dll
+!Agent/InstallerCustomActions/Microsoft.Deployment.WindowsInstaller.dll
+!Agent/NewRelic.Agent.IL/Messages/NewRelic.Agent.Messages.dll
+!Agent/ExternalLibs/log4net.dll
+
+*.aps
+*.bak
+*.cac
+*.cache
+*.exe
+*.idl
+*.ilk
+*.ipch
+*.lastbuildstate
+*.lib
+*.ncb
+*.obj
+*.pch
+*.pdb
+*.sbr
+*.sln.docstates
+*.suo
+*.tlb
+*.tlh
+*.tli
+*.user
+*.vspscc
+*.vsmdi
+*_i.c
+*_p.c
+
+# Visual Studio Solution glop
+# Keep the .sln (visual studio solution) and .suo (Solution user options) files around
+*.sdf
+*.opensdf
+*.vcxproj.user
+
+*.tlog
+
+# Misc build artifacts
+*InstallerCustomActions.csproj.FileListAbsolute.txt
+NewRelicCoreVersion.h
+Agent/BuildDependencies/*
+Agent/Debug/*
+Agent/NewRelic.Devel.Experiment/Debug/*
+
+# See http://coderjournal.com/2010/05/gitignore-config-file-for-net-projects/
+Win32/
+[Bb]in
+[Bb]in/
+[Dd]ebug*/
+[Oo]bj/
+[Rr]elease*/
+[Tt]est[Rr]esult*
+_ReSharper*/
+x64/
+
+# Misc build artifacts
+Agent/NewRelic.Profiler.Test/Debug/*
+
+# Development stuff
+*.swp
+tags
+FILES
+junk
+*.out
+*.ncrunchsolution
+*.ncrunchproject
+
+#### From Visual studio git-extensions plugin(?)
+Thumbs.db
+
+# NDepends utility
+NDependOut/
+*.ndproj
+
+*.pidb
+
+test-results
+Agent/_NCrunch_FullAgent/
+
+#nuget - we want to include complete package contents - dlls, exe, so on
+!nuget/*/lib/*/*.dll
+!nuget/*/content/*
+!nuget/*/content/bin/*
