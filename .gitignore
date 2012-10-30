@@ -3,6 +3,7 @@
 
 # There are some dll files that are commited to the repository.
 # These apparently are needed for InstallerCustomActions and to bootstrap the Messages
+*.dll
 !Agent/InstallerCustomActions/Microsoft.Deployment.WindowsInstaller.dll
 !Agent/NewRelic.Agent.IL/Messages/NewRelic.Agent.Messages.dll
 !Agent/ExternalLibs/log4net.dll
